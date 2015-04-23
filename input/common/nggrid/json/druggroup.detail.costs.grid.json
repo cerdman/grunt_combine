@@ -1,0 +1,56 @@
+{
+    "outcomesCosts": [
+        {
+            "field": "aedrug_label",
+            "cellClass": "drugName",
+            "width": "197px",
+            "visible": true,
+            "pinned": true,
+            "displayName": "Product Name(s)",
+            "cellTemplate": "<div class=\"ngCellText pull-left\"><a ui-sref=\"drugs.detail.costs({id:row.getProperty('aedrug_id') })\">{{row.getProperty(col.field) | pascalCaseFilter }}</a></div>"
+        },
+        {
+            "field": "metric_mean_patient_cost_rx",
+            "width": "176px",
+            "visible": true,
+            "displayName": "RxCost Per Prescription",
+            "cellTemplate": "<div class=\"ngCellText text-center\">{{row.getProperty(col.field) | currency:$:2 }}</div>"
+        },
+        {
+            "field": "metric_drug_price",
+            "width": "244px",
+            "visible": true,
+            "displayName": "Retail Price Per Prescription (2014)",
+            "cellTemplate": "<div class=\"ngCellText text-center\">{{row.getProperty(col.field) | currency:$:2 }}</div>"
+        },
+        {
+            "field": "metric_sum_annual_costs_rx",
+            "width": "206px",
+            "visible": true,
+            "displayName": "Total Costs Per Prescription",
+            "cellTemplate": "<div class=\"ngCellText text-center\">{{row.getProperty(col.field) | currency:$:2 }}</div>"
+        },
+        {
+            "field": "metric_sum_costed_rx",
+            "width": "108px",
+            "visible": true,
+            "displayName": "Prescriptions",
+            "cellFilter": "number:0",
+            "cellTemplate": "<div class=\"ngCellText text-center\">{{row.getProperty(col.field) | number:0}}</div>"
+        },
+        {
+            "field": "metric_potential_savings_rx",
+            "width": "*",
+            "visible": true,
+            "displayName": "RxCost Savings (Per Rx)",
+            "cellTemplate": "<div class=\"ngCellText text-center\">{{row.getProperty(col.field) | currency:$:0 }}</div>"
+        },
+        {
+            "field": "metric_mean_patient_cost",
+            "width": "*",
+            "visible": false,
+            "displayName": "RxCost Per Patient",
+            "cellTemplate": "<div class=\"ngCellText text-center\">{{row.getProperty(col.field) | currency:$:2 }}</div>"
+        }
+    ]
+}

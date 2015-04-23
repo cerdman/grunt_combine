@@ -1,0 +1,49 @@
+{
+    "portfolioDrugOverview": [
+            {
+                "field": "product_name",
+                "pinned": true,
+                "width": "169px",
+                "visible": true,
+                "displayName": "Product Name",
+                "cellTemplate": "<div class='ngCellText'><a ui-sref='drugs.detail.overview({id: row.getProperty(\"aedrug_id\")})'>{{row.getProperty(col.field) | titleCase}}</a></p></div>"
+
+            },
+            {
+                "field": "metric_sum_company_userPortfolio_exposed",
+                "cellClass": "centerCellText",
+                "cellFilter": "emptyCellFilter:'pctgFilter':0",
+                "pinned": false,
+                "width": "178px",
+                "visible": true,
+                "displayName": "Portfolio Co. Exposed"
+            },
+            {
+                "field": "metric_sum_company_exposed",
+                "cellClass": "centerCellText",
+                "cellFilter": "emptyCellFilter:'pctgFilter':0",
+                "pinned": false,
+                "width": "178px",
+                "visible": true,
+                "displayName": "Total Co. Exposed"
+            },
+            {
+                "field": "metric_pctg_company_userPortfolio_exposed",
+                "cellClass": "centerCellText",
+                "cellFilter": "emptyCellFilter:'pctgFilter':0",
+                "pinned": false,
+                "width": "161px",
+                "visible": true,
+                "displayName": "Percentage Exposure"
+            },
+            {
+                "field": "metric_fact_product_rxscore",
+                "cellClass": "centerCellText",
+                "pinned": false,
+                "width": "140",
+                "visible": true,
+                "displayName": "RxScore",
+                "cellTemplate": "<div ng-class='{\"ngCellText\" : formatIncidenceRate(col.field, row.getProperty(col.field)) == \"ngCellText\",\"green\" : formatIncidenceRate(col.field, row.getProperty(col.field)) == \"green\",\"red\" : formatIncidenceRate(col.field, row.getProperty(col.field)) == \"red\"}'><p>{{row.getProperty(col.field) > 0 ? (row.getProperty(col.field) | number:2) : '-'}}</p></div>"
+            }
+    ]
+}

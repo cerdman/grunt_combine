@@ -1,0 +1,18 @@
+{
+    "eventsGrid": [{
+            "field": "event_dt",
+            "pinned": true,
+            "cellClass": "drugName",
+            "width": "10%",
+            "visible": true,
+            "cellFilter": "date",
+            "displayName": "Date"
+        },
+        {
+            "field": "event_type",
+            "cellClass": "drugName",
+            "width": "20%",
+            "visible": true,
+            "displayName": "Event Type"
+        }]
+}

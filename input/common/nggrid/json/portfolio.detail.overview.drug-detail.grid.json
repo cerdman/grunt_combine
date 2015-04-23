@@ -1,0 +1,63 @@
+{
+    "portfolioDrugOverview": [
+            {
+                "field": "product_name",
+                "pinned": true,
+                "width": "244px",
+                "visible": true,
+                "displayName": "Product Name",
+                "cellTemplate": "<div class='ngCellText'><a ui-sref='drugs.detail.overview({id: row.getProperty(\"aedrug_id\")})'>{{row.getProperty(col.field) | titleCase}}</a></p></div>"
+
+            },
+            {
+                "field": "evaluate_productRevenue2014",
+                "cellClass": "centerCellText",
+                "cellFilter": "emptyCellFilter:'currency':$:2",
+                "pinned": false,
+                "width": "112px",
+                "visible": true,
+                "displayName": "2014 Revenue"
+            },
+            {
+                "field": "metric_pscount",
+                "cellClass": "centerCellText",
+                "cellFilter": "emptyCellFilter:'number':0",
+                "pinned": false,
+                "visible": true,
+                "width": "137px",
+                "displayName": "Primary Suspect Cases"
+            },
+            {
+                "field": "metric_rxscore",
+                "cellClass": "centerCellText",
+                "pinned": false,
+                "visible": true,
+                "width": "80px",
+                "cellFilter": "naFilter",
+                "displayName": "RxScore",
+                "cellTemplate": "<div ng-class='{\"green\" : formatRxscore(row.getProperty(col.field)) == \"green\",\"grey\" : formatRxscore(row.getProperty(col.field)) == \"grey\",\"yellow\" : formatRxscore(row.getProperty(col.field)) == \"yellow\",\"orange\" : formatRxscore(row.getProperty(col.field)) == \"#CD7D0F\",\"red\" : formatRxscore(row.getProperty(col.field)) == \"red\",\"grey\" : formatRxscore(row.getProperty(col.field)) == \"grey\"}'><p>{{ row.getProperty(col.field) || \"N\/A\" }}</p></div>"
+            },
+            {
+                "field": "class_indication",
+                "pinned": false,
+                "visible": true,
+                "width": "*",
+                "displayName": "Primary Indication"
+            },
+            {
+                "field": "product_genericName",
+                "cellFilter": "capitalizeFilter",
+                "pinned": false,
+                "width": "140",
+                "visible": false,
+                "displayName": "Generic Name"
+            },
+            {
+                "field": "partner_companies",
+                "pinned": false,
+                "width": "140",
+                "visible": false,
+                "displayName": "Partner Companies"
+            }
+    ]
+}
