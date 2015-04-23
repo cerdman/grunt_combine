@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             tasks: 'default'
         },
         jshint: {
-            files: ['grunt.js', 'input/**/*.js', 'input/**/*.json'],
+            files: ['grunt.js', 'input/**/*.js', 'input/**/*.json', 'dist/*.js'],
             options: {
                 curly: true,
                 eqeqeq: true,
@@ -98,6 +98,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadTasks('tasks');
     // By default, lint and run all tests.
-    grunt.registerTask('default', ['copy','json-minify:columns','json','uglify:columns']);
+    grunt.registerTask('default', ['copy','json-minify:columns','json','jshint']);
 
 };

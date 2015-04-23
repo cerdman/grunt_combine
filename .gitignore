@@ -7,6 +7,8 @@
 Session.vim
 .netrwhist
 *~
+.tmp
+dist
 
 
 ### JetBrains template
